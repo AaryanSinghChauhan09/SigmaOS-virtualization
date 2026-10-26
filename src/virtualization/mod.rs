@@ -1,0 +1,60 @@
+// SigmaOS Virtualization Module
+pub mod firecracker;
+pub mod kvm;
+pub mod kvm_vcpu;
+pub mod kvm_vmcs;
+pub mod oci_pod;
+pub mod orchestration;
+pub mod rancher;
+pub mod virtiofsd;
+pub mod virtualization_pr_gateway;
+pub mod vm_manager;
+
+pub use virtiofsd::{VirtioFsConfig, VirtioFsDaemon, VirtioFsInodeMap};
+pub use virtualization_pr_gateway::{
+    SovereignVirtualizationPrGatewayEngine, VirtualizationPrCategory, VirtualizationPrStatus,
+    VirtualizationPrSubmission, VirtualizationTechnologyFormat,
+};
+
+pub use kvm_vcpu::{
+    KvmExitCode, KvmMemoryRegion, KvmVcpu, KvmVcpuRegisters, KvmVcpuSregs, VirtioDeviceBackend,
+    VirtioDeviceType,
+};
+
+pub use orchestration::{
+    Container, KubernetesPod, LegacyVirtualizationStrategy, ModernVirtualizationStrategy,
+    ResourcePool, VirtualMachine, VirtualizationError, VirtualizationOrchestrator,
+    VirtualizationStrategy, VirtualizationStrategyFactory, VirtualizationTech, VmState,
+};
+
+pub use oci_pod::{ContainerConfig, OciPod, OciPodManager, PodState};
+pub use rancher::{
+    DaemonlessContainer, K3osOrchestrator, RancherError, RancherHarvesterVirtualMachineGovernor,
+    RancherK3sEmbeddedClusterController, RancherSystemDockerEngine,
+};
+pub mod vendor_hardware;
+pub use vendor_hardware::{
+    AmdVmcbExecutionBlock, IntelVmcsExecutionState, MultiVendorVirtualizationEngine,
+    NvidiaVgpuMediatedInstance, VirtualizationVendorType,
+};
+
+pub mod sovereign_virtualization_and_containers_pr;
+pub use sovereign_virtualization_and_containers_pr::*;
+
+pub mod sovereign_virtualization_and_containers_v61_pr;
+pub use sovereign_virtualization_and_containers_v61_pr::*;
+
+pub mod sovereign_virtualization_and_containers_v63_pr;
+pub use sovereign_virtualization_and_containers_v63_pr::*;
+
+pub mod sovereign_virtualization_and_containers_v65_pr;
+pub use sovereign_virtualization_and_containers_v65_pr::*;
+
+pub mod sovereign_virtualization_and_containers_v67_pr;
+pub use sovereign_virtualization_and_containers_v67_pr::*;
+
+pub mod sovereign_virtualization_and_containers_v68_pr;
+pub use sovereign_virtualization_and_containers_v68_pr::*;
+
+pub mod sovereign_virtualization_and_containers_v74_pr;
+pub use sovereign_virtualization_and_containers_v74_pr::*;
