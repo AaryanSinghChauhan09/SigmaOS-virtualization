@@ -1,0 +1,16 @@
+[component]
+name = "SigmaOS-virtualization"
+tier = 1
+stability = "scaffold"
+language = "rust"
+description = "KVM and MicroVM lifecycle manager provisioning isolated gateway and workstation VM boundaries"
+upstream = ["https://github.com/firecracker-microvm/firecracker"]
+
+[contract]
+provides = ["vm-lifecycle", "microvm-provisioner", "virtio-bus"]
+depends_on = []
+
+[maturity]
+status = "Scaffold"
+test_evidence = "Compiles and passes AAA unit tests"
+next_milestone = "Hardware and runtime integration"
