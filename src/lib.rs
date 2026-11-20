@@ -1,5 +1,7 @@
 //! SigmaOS-virtualization: SigmaOS virtualization model.
 
+pub mod sigmavirtualizationmanager;
+
 use std::collections::BTreeMap;
 use std::fmt;
 
