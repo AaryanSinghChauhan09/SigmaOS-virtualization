@@ -1,5 +1,8 @@
 //! SigmaOS-virtualization: SigmaOS virtualization model.
 
+/// Virtualization manager: VMs, disks, networks.
+pub mod sigmavirtualization;
+
 pub mod sigmavirtualizationmanager;
 
 use std::collections::BTreeMap;
