@@ -8,7 +8,7 @@ upstream = ["https://github.com/firecracker-microvm/firecracker"]
 
 [contract]
 provides = ["vm-lifecycle", "microvm-provisioner", "virtio-bus"]
-depends_on = ["SigmaOS-system"]
+depends_on = []
 
 [maturity]
 status = "Implemented"
